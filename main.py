@@ -37,7 +37,7 @@ class ConfigValidator:
         except FileNotFoundError:
             raise ConfigError(f"File not found: {yaml_path}")
     
-    
+    @staticmethod
     def validate_config(config_yaml_path: Path) -> dict:
         parameters = ConfigValidator.validate_yaml_file(config_yaml_path)
         required_keys = {
